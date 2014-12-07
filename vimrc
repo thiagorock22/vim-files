@@ -16,11 +16,12 @@ set hlsearch
 let NERDTreeShowHidden=1
 
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme jellybeans
 
-let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
+"let g:solarized_bold=1
+"let g:solarized_underline=1
+"let g:solarized_italic=1
 
 nmap <silent> <c-k> :wincmd k<CR>                                                         
 nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
