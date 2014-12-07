@@ -1,21 +1,27 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+    ignore = all
 [submodule "bundle/multiple-cursors"]
 	path = bundle/multiple-cursors
 	url = git://github.com/terryma/vim-multiple-cursors.git
+    ignore = all
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
+    ignore = all
 [submodule "bundle/linters"]
 	path = bundle/linters
 	url = https://bitbucket.org/tim_heap/linters.vim
+    ignore = all
 [submodule "bundle/tcomment_vim"]
 	path = bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+    ignore = all
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+    ignore = all
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
@@ -23,18 +29,30 @@
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+    ignore = all
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
-	url = http://github.com/mattn/zencoding-vim.git
+	url = https://github.com/mattn/emmet-vim
+    ignore = all
 [submodule "bundle/tabline"]
 	path = bundle/tabline
 	url = git://github.com/mkitt/tabline.vim.git
+    ignore = all
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
+    ignore = all
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+    ignore = all
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = https://github.com/joonty/vdebug.git
+    ignore = all
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git

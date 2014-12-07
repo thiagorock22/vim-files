@@ -4,24 +4,32 @@ vim-files
 My vim config files
 
 Installation
-=========
+=======
 
-- In your home directory create a folder .vim
+In your home folder:
 
-~$ mkdir .vim
+```
+git clone <url-repository> .vim && cd .vim && chmod x+o install.sh && sh install.sh
 
-- After, clone the repository in this folder
+```
 
-~$ git clone <url> .vim
+Modules used:
 
-- Update all submodules
+* nerdtree
+* multiple-cursors
+* vim-sensible
+* linters
+* tcomment_vim
+* ctrlp.vim
+* vim-surround
+* snipmate.vim
+* zencoding-vim
+* tabline
+* vim-airline
+* vim-fugitive
+* vdebug
+* vim-coffee-script
 
-~$ git submodulo init && git submodule update
+Fonts by:
 
-- Create a symbolic link of vimrc in your home folder 
-
-~$ ln -s ~/.vim/vimrc ~/.vimrc
-
-- Open your vim and check the features ;)
-
-~$ vim 
+* powerline-fonts
