@@ -14,6 +14,10 @@ Instalation
 
 ~$ git clone <url> .vim
 
+- Update all submodules
+
+~$ git submodulo init && git submodule update
+
 - Create a symbolic link of vimrc in your home folder 
 
 ~$ ln -s ~/.vim/vimrc ~/.vimrc
