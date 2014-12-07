@@ -3,7 +3,7 @@ vim-files
 
 My vim config files
 
-Instalation
+Installation
 =========
 
 - In your home directory create a folder .vim
