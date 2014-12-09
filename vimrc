@@ -13,6 +13,16 @@ set tabstop=4
 set expandtab
 set hlsearch
 
+" fix alt mapping on terminal
+let c='0'
+while c <= '9'
+  exec "set <A-".c.">=\e".c
+  exec "imap \e".c." <A-".c.">"
+  let c = nr2char(1+char2nr(c))
+endw
+
+set timeout ttimeoutlen=50
+
 let NERDTreeShowHidden=1
 
 set background=dark
@@ -123,3 +133,5 @@ function! SortUnique( list, ... )
 
     return result
 endfunction
+
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates"
