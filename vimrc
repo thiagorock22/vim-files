@@ -92,7 +92,7 @@ let g:vdebug_options = {
 \ 'port': '9001'
 \}
 
-let NERDTreeIgnore = ['\.swp$']
+let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$']
 
 function! CopyMatches(reg)
     let hits = []
