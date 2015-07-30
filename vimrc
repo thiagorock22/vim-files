@@ -73,6 +73,7 @@ nnoremap <A-8> :tabnext 8<CR>
 nnoremap <A-9> :tabnext 9<CR>
 
 nmap <F8> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 
