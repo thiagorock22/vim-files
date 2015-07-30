@@ -9,7 +9,7 @@ Installation
 In your home folder:
 
 ```
-git clone <url-repository> .vim && cd .vim && chmod x+o install.sh && sh install.sh
+git clone <url-repository> .vim && cd .vim && chmod o+x install.sh && sh install.sh
 
 ```
 
