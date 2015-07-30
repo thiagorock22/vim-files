@@ -15,7 +15,7 @@ git clone <url-repository> .vim && cd .vim && chmod o+x install.sh && sh install
 
 Modules used:
 
-* nerdtree
+* [nerdtree] (https://github.com/scrooloose/nerdtree)
 * multiple-cursors
 * vim-sensible
 * linters
