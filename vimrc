@@ -78,7 +78,7 @@ noremap <F4> :set hlsearch! hlsearch?<CR>
 let NERDTreeShowHidden=1
 nmap <F8> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$']
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 if has("gui_running")
     set guioptions-=m  "remove menu bar
