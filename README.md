@@ -16,12 +16,12 @@ git clone <url-repository> .vim && cd .vim && chmod o+x install.sh && sh install
 Modules used:
 
 * [nerdtree] (https://github.com/scrooloose/nerdtree)
-* multiple-cursors
+* [multiple-cursors] (https://github.com/terryma/vim-multiple-cursors)
 * vim-sensible
 * linters
 * tcomment_vim
 * ctrlp.vim
-* vim-surround
+* [vim-surround] (https://github.com/tpope/vim-surround)
 * snipmate.vim
 * zencoding-vim
 * tabline
