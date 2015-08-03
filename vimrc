@@ -61,6 +61,9 @@ vnoremap <lt> <lt>gv
 nnoremap <C-t> :tabnew<CR>
 nnoremap gt :tabnext<CR>
 nnoremap tg :tabprevious<CR>
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
 nnoremap <A-1> :tabnext 1<CR>
 nnoremap <A-2> :tabnext 2<CR>
 nnoremap <A-3> :tabnext 3<CR>
@@ -74,11 +77,25 @@ nnoremap <A-9> :tabnext 9<CR>
 " Press F4 to toggle highlighting on/off, and show current value.
 noremap <F4> :set hlsearch! hlsearch?<CR>
 
+"Git
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Gcommit<CR>
+noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+noremap <Leader>gr :Gremove<CR>
+
+nmap <leader>l :set list!<CR>
+
 " NERDTree Configuration
 let NERDTreeShowHidden=1
 nmap <F8> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$']
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+set listchars=tab:▸\ ,eol:¬
 
 if has("gui_running")
     set guioptions-=m  "remove menu bar
