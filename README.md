@@ -9,19 +9,19 @@ Installation
 In your home folder:
 
 ```
-git clone <url-repository> .vim && cd .vim && chmod x+o install.sh && sh install.sh
+git clone <url-repository> .vim && cd .vim && chmod o+x install.sh && sh install.sh
 
 ```
 
 Modules used:
 
-* nerdtree
-* multiple-cursors
+* [nerdtree] (https://github.com/scrooloose/nerdtree)
+* [multiple-cursors] (https://github.com/terryma/vim-multiple-cursors)
 * vim-sensible
 * linters
 * tcomment_vim
 * ctrlp.vim
-* vim-surround
+* [vim-surround] (https://github.com/tpope/vim-surround)
 * snipmate.vim
 * zencoding-vim
 * tabline

@@ -23,8 +23,6 @@ endw
 
 set timeout ttimeoutlen=50
 
-let NERDTreeShowHidden=1
-
 set background=dark
 "colorscheme solarized
 colorscheme jellybeans
@@ -33,22 +31,18 @@ colorscheme jellybeans
 "let g:solarized_underline=1
 "let g:solarized_italic=1
 
-nmap <silent> <c-k> :wincmd k<CR>                                                         
-nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
-nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
-nmap <silent> <c-l> :wincmd l<CR>
-
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
 
 "air-line config
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
 
-let g:airline_symbols.space = "\ua0"
+"let g:airline_symbols.space = "\ua0"
+"set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 
 "config for multicursors plugin
 let g:multi_cursor_next_key='<C-n>'
@@ -57,8 +51,13 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 let Tlist_Use_Right_Window = 1
-" let Tlist_Show_One_File = 1
+"let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1 
+
+nmap <silent> <c-k> :wincmd k<CR>                                                         
+nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
+nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
+nmap <silent> <c-l> :wincmd l<CR>
 
 " for command mode
 nmap <S-Tab> <<
@@ -72,6 +71,9 @@ vnoremap <lt> <lt>gv
 nnoremap <C-t> :tabnew<CR>
 nnoremap gt :tabnext<CR>
 nnoremap tg :tabprevious<CR>
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
 nnoremap <A-1> :tabnext 1<CR>
 nnoremap <A-2> :tabnext 2<CR>
 nnoremap <A-3> :tabnext 3<CR>
@@ -82,9 +84,28 @@ nnoremap <A-7> :tabnext 7<CR>
 nnoremap <A-8> :tabnext 8<CR>
 nnoremap <A-9> :tabnext 9<CR>
 
-nmap <F8> :NERDTreeToggle<CR>
+" Press F4 to toggle highlighting on/off, and show current value.
+noremap <F4> :set hlsearch! hlsearch?<CR>
 
-set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
+"Git
+noremap <Leader>ga :Gwrite<CR>
+noremap <Leader>gc :Gcommit<CR>
+noremap <Leader>gsh :Gpush<CR>
+noremap <Leader>gll :Gpull<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gb :Gblame<CR>
+noremap <Leader>gd :Gvdiff<CR>
+noremap <Leader>gr :Gremove<CR>
+
+nmap <leader>l :set list!<CR>
+
+" NERDTree Configuration
+let NERDTreeShowHidden=1
+nmap <F8> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$']
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+set listchars=tab:▸\ ,eol:¬
 
 if has("gui_running")
     set guioptions-=m  "remove menu bar
@@ -94,15 +115,10 @@ if has("gui_running")
     set guioptions-=e  "remove remove the gui tab
 endif
 
-" Press F4 to toggle highlighting on/off, and show current value.
-noremap <F4> :set hlsearch! hlsearch?<CR>
-
 let g:vdebug_options = {
 \ 'server': '127.0.0.1',
-\ 'port': '9001'
+\ 'port': '9000'
 \}
-
-let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$']
 
 function! CopyMatches(reg)
     let hits = []
