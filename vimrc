@@ -4,6 +4,8 @@ filetype plugin indent on
 
 call pathogen#helptags()
 
+let mapleader = ","
+
 "used for enable yank to clipboard
 set clipboard=unnamedplus
 set number
@@ -24,25 +26,10 @@ endw
 set timeout ttimeoutlen=50
 
 set background=dark
-"colorscheme solarized
-colorscheme jellybeans
-
-"let g:solarized_bold=1
-"let g:solarized_underline=1
-"let g:solarized_italic=1
+colorscheme molokai
 
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
-
-"air-line config
-"let g:airline_powerline_fonts = 1
-
-"if !exists('g:airline_symbols')
-"  let g:airline_symbols = {}
-"endif
-
-"let g:airline_symbols.space = "\ua0"
-"set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 11
 
 "config for multicursors plugin
 let g:multi_cursor_next_key='<C-n>'
@@ -54,6 +41,7 @@ let Tlist_Use_Right_Window = 1
 "let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1 
 
+" switch between vim window split
 nmap <silent> <c-k> :wincmd k<CR>                                                         
 nmap <silent> <c-j> :wincmd j<CR>                                                                                                                       
 nmap <silent> <c-h> :wincmd h<CR>                                                                                                                       
@@ -98,14 +86,13 @@ noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
 nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
 
 " NERDTree Configuration
 let NERDTreeShowHidden=1
 nmap <F8> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$']
+let NERDTreeIgnore = ['\.swp$','\.svn$','\.git$','\~$']
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-set listchars=tab:▸\ ,eol:¬
 
 if has("gui_running")
     set guioptions-=m  "remove menu bar
