@@ -31,6 +31,9 @@ colorscheme molokai
 "set terminal colors to 256 for a better colorscheme
 set t_Co=256
 
+let g:airline_powerline_fonts=1
+let g:airline_theme='powerlineish'
+
 "config for multicursors plugin
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
